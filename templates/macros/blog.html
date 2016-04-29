@@ -18,30 +18,36 @@
     </audio>
     <div class="row metainfo">
         <div class="large-4 columns">
-            <ul class="pricing-table">
-                <li class="title">Les liens</h2>
-                {% for item in post.links.blocks %}
-                <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
+            {% if post.links %}
+                <ul class="pricing-table">
+                    <li class="title">Les liens</h2>
+                    {% for item in post.links.blocks %}
+                        <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
 
         <div class="large-4 columns">
-            <ul class="pricing-table">
-                <li class="title">L’agenda</li>
-                {% for item in post.agenda.blocks %}
-                <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
+            {% if post.agenda %}
+                <ul class="pricing-table">
+                    <li class="title">L’agenda</li>
+                    {% for item in post.agenda.blocks %}
+                        <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
 
         <div class="large-4 columns">
-            <ul class="pricing-table">
-                <li class="title">La playlist</li>
-                {% for item in post.playlist.blocks %}
-                <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
+            {% if post.playlist %}
+                <ul class="pricing-table">
+                    <li class="title">La playlist</li>
+                    {% for item in post.playlist.blocks %}
+                        <li class="bullet-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 </article>
