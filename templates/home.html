@@ -3,16 +3,20 @@
 {% from "macros/pagination.html" import render_pagination %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  {% for child in this.pagination.items %}
-    {% if child._data._model == "blog" %}
-        {% for blogpost in child.pagination.items %}
-            {% if loop.index0 < 10 %}
-                {{ render_blog_post(blogpost, from_index=true) }}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-  {% endfor %}
 
-  <a href="blog">Voir les autres posts</a>
+    {{ this.who_are_we }}
+    {{ this.how_to_contact }}
+
+    {% for child in this.pagination.items %}
+        {% if child._data._model == "blog" %}
+            {% for blogpost in child.pagination.items %}
+                {% if loop.index0 < 10 %}
+                    {{ render_blog_post(blogpost, from_index=true) }}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    <a href="blog">Voir les autres posts</a>
 
 {% endblock %}
