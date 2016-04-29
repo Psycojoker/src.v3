@@ -1,0 +1,281 @@
+.ribbon {
+   position: fixed;
+   right: 0px;
+   top: 0px;
+   z-index: 90;:
+}
+
+.listen {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.post-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(134, 134, 134, 0.3);
+}
+
+header h4 {
+    border-bottom: 1px solid rgba(134, 134, 134, 0.3);
+    color: #4A831C;
+    font-weight: bold;
+}
+
+header p {
+    text-align: left;
+}
+
+header a {
+    color: #4A831C;
+    font-weight: bold;
+}
+
+article {
+    margin-bottom: 40px;
+}
+
+article img {
+    margin-top: 16px;
+}
+
+.post-title small {
+    align-self: flex-end;
+    margin-bottom: 2px;
+    line-height: inherit;
+}
+
+.header {
+    background: transparent no-repeat url("../img/banner2.jpg") scroll center bottom / cover;
+    height: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    border-bottom: solid black 2px;
+}
+.header-chat {
+    background: transparent no-repeat url("../img/banner3.jpg") scroll center bottom / cover;
+    height: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    border-bottom: solid black 2px;
+}
+.blink {
+    animation: blink 1s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+		    }
+
+@keyframes blink {
+	to {
+	    visibility: hidden;
+	     }
+	 }
+@-webkit-keyframes blink {  
+    to {
+	visibility: hidden;
+	}
+    }
+
+article a {
+    color: #4A831C;
+    font-weight: bold;
+}
+
+.header h1 {
+    align-self: flex-end;
+    margin-left: 20px;
+    text-shadow: 2px 3px black;
+}
+
+.header h1 a {
+    color: white;
+}
+
+.header h1 small {
+    color: white;
+}
+
+article h5 {
+    font-weight: bold;
+}
+
+article ul a {
+    font-weight: normal;
+}
+
+article audio {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.audiojs {
+    width: 100%;
+    background: #2C7E08 -moz-linear-gradient(center top , #99AB41 0%, #5C6E00 50%, #5C6E00 51%, #99AB41 100%) repeat scroll 0% 0%;
+}
+
+.audiojs .scrubber {
+    width: 84%;
+}
+
+.audiojs .play-pause {
+    border: none;
+}
+
+.pricing-table a {
+    color: black;
+}
+
+.pricing-table .title {
+    background-color: #99AB41;
+    font-weight: bold;
+}
+
+.pricing-table {
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer {
+    background: transparent no-repeat url("../img/footer.jpg") scroll center bottom / cover;
+    min-height: 150px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.footer-chat {
+    background: transparent no-repeat url("../img/footer2.jpg") scroll center bottom / cover;
+    min-height: 150px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+footer p {
+    text-align: center;
+}
+
+footer a {
+    font-weight: bold;
+    color: #99AB41;
+}
+
+.top-players .last-podcast {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.top-players .radiocampus-live {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.top-players .audiojs {
+    height: 22px;
+}
+
+.last-podcast {
+    border: solid 1px #CF6E0E;
+}
+
+.radiocampus-live {
+    border: solid 1px #1A9194;
+}
+
+.top-players .time {
+    border: none;
+    margin: 0px;
+}
+
+.top-players .last-podcast .audiojs {
+    background: #F08A24;
+    box-shadow: none;
+}
+
+.top-players .radiocampus-live .audiojs {
+    background: #1CB5B9;
+    box-shadow: none;
+}
+
+.top-players .audiojs .play-pause {
+    width: 19px;
+    height: 20px;
+    padding: 0px 8px 0px 0px;
+}
+
+.top-players .audiojs p {
+    width: 25px;
+    height: 20px;
+    margin: -3px 0px 0px -1px;
+}
+
+.top-players .audiojs .scrubber {
+    background: #5a5a5a;
+    width: 72%;
+    height: 10px;
+    margin: 5px;
+}
+
+.top-players .audiojs .progress {
+    height: 10px;
+    width: 0px;
+    background: #ccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+    background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc 100%);
+}
+
+.top-players .audiojs .loaded {
+    height: 10px;
+    background: #000;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+    background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%);
+}
+
+.top-players .audiojs .time {
+    float: left;
+    height: 25px;
+    line-height: 21px;
+}
+
+.top-players .audiojs .error-message {
+    height: 24px;
+    line-height: 24px;
+}
+
+.track-details {
+    clear: both;
+    height: 24px;
+    width: 100%;
+    padding: 1px 6px;
+    padding-left: 8px;
+    font-family: monospace;
+    font-size: 11px;
+    line-height: 20px;
+    -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.last-podcast .track-details {
+    background: #F08A24;
+}
+
+.radiocampus-live .track-details {
+    background: #1CB5B9;
+}
+
+@media only screen and (max-width: 767px) {
+    .row .top-players {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    header {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    article {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
