@@ -4,48 +4,51 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 
-      <div class="row top-players">
-          <div class="large-6 columns">
-              <div class="last-podcast">
-                 <div class="track-details">
-                     Écoutez notre dernier podcast !
-                 </div>
-                  <audio>
-                      <source style="100%" type="audio/mpeg" src="http://emissions.radiocampus.be/src/archives/20151211_src_dewey.mp3">
-                  </audio>
-              </div>
-          </div>
-          <div class="large-6 columns">
-              <div class="radiocampus-live">
-                 <div class="track-details">
-                     Écoutez RadioCampus en live !
-                 </div>
-                  <audio>
-                    Your browser does not support the <code>audio</code> element.
-                    <source src="http://streamer.radiocampus.be/stream.mp3" type="audio/mpeg" />
-                  </audio>
-              </div>
-          </div>
-      </div>
-
-      <header>
-          <div class="row">
-              <div class="large-8 columns">
-                  <h4>Qui sommes-nous ?</h4>
-                  {{ this.who_are_we }}
-              </div>
-
-              <div class="large-4 columns">
-                  <h4>Comment nous contacter ?</h4>
-                  {{ this.how_to_contact }}
-              </div>
-          </div>
-      </header>
-
-
     {% for child in this.pagination.items %}
         {% if child._data._model == "blog" %}
             {% for blogpost in child.pagination.items %}
+
+                {% if loop.index0 == 0 %}
+                    {# dirty hack to only do that for the first post #}
+                    <div class="row top-players">
+                        <div class="large-6 columns">
+                            <div class="last-podcast">
+                               <div class="track-details">
+                                   Écoutez notre dernier podcast !
+                               </div>
+                                <audio>
+                                    <source style="100%" type="audio/mpeg" src="{{ blogpost.audio_url }}">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="large-6 columns">
+                            <div class="radiocampus-live">
+                               <div class="track-details">
+                                   Écoutez RadioCampus en live !
+                               </div>
+                                <audio>
+                                  Your browser does not support the <code>audio</code> element.
+                                  <source src="http://streamer.radiocampus.be/stream.mp3" type="audio/mpeg" />
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+
+                    <header>
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <h4>Qui sommes-nous ?</h4>
+                                {{ this.who_are_we }}
+                            </div>
+
+                            <div class="large-4 columns">
+                                <h4>Comment nous contacter ?</h4>
+                                {{ this.how_to_contact }}
+                            </div>
+                        </div>
+                    </header>
+                {% endif %}
+
                 {% if loop.index0 < 10 %}
                     {{ render_blog_post(blogpost, from_index=true) }}
                 {% endif %}
