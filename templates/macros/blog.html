@@ -1,20 +1,43 @@
 {% macro render_blog_post(post, from_index=false) %}
-  <div class="blog-post">
-  {% if from_index %}
-    <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
-  {% else %}
-    <h2>{{ post.title }}</h2>
-  {% endif %}
-  <p class="meta">
-    written by
-    {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
-    {% endif %}
-    on {{ post.pub_date }}
-  </p>
-  {{ post.body }}
-  </div>
+<article>
+    <h3 class="post-title"><a href="{{ post|url }}">{{ post.title }}</a><
+        <small>Écrit par <a href="#">{{ post.author }}</a> le {{ post.pub_date }}</small></h3>
+
+    <div class="row">
+        <div class="large-4 columns">
+            <img src="img/A COMPLETER.JPG">
+        </div>
+        <div class="large-8 columns">
+            <p></p>
+        </div>
+        {{ post.body }}
+    </div>
+
+    <audio>
+        <source style="100%" type="audio/mpeg" src="{{ post.audio_url }}">
+    </audio>
+    <div class="row metainfo">
+        <div class="large-4 columns">
+            <ul class="pricing-table">
+                <li class="title">Les liens</h2>
+            <li class="bullet-item"><a href="http://hackeragenda.be">Hacker agenda</a></li>
+        </ul>
+    </div>
+
+    <div class="large-4 columns">
+        <ul class="pricing-table">
+            <li class="title">L’agenda</li>
+            <li class="bullet-item"><a href="">DATE: NOM</a></li>
+        </ul>
+    </div>
+
+    <div class="large-4 columns">
+        <ul class="pricing-table">
+            <li class="title">La playlist</li>
+            <li class="bullet-item"><a href=""> — </a></li>
+            <li class="bullet-item"><a href=""> — </a></li>
+            <li class="bullet-item"><a href=""> — </a></li>
+        </ul>
+    </div>
+</article>
 {% endmacro %}
