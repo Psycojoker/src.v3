@@ -13,9 +13,12 @@
         {{ post.body }}
     </div>
 
-    <audio>
-        <source style="100%" type="audio/mpeg" src="{{ post.audio_url }}">
-    </audio>
+    <p>
+        <audio>
+            <source style="100%" type="audio/mpeg" src="{{ post.audio_url }}">
+        </audio>
+    </p>
+
     <div class="row metainfo">
         <div class="large-4 columns">
             {% if post.links %}
