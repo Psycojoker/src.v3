@@ -279,3 +279,13 @@ footer a {
         margin-right: 18px;
     }
 }
+
+.other-posts {
+    text-align: center;
+}
+
+.other-posts a {
+    color: #4A831C;
+    font-weight: bold;
+    font-size: 20px;
+}
