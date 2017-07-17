@@ -1,6 +1,11 @@
 _model: home
 ---
-how_to_contact: Des questions ? Des réactions ? Des sujets dont vous aimeriez entendre parler ? Envie de participer à l'émission ? [Écrivez nous un mail](mailto:src@radiocampus.be). En outre, un salon de discussion IRC est accessible via le bouton, en haut à droite, ou via n'importe quel prog IRC : #source sur freenode.net
+how_to_contact:
+
+Des questions ? Des réactions ? Des sujets dont vous aimeriez entendre parler ? Envie de participer à l'émission ? [Écrivez nous un mail](mailto:src@radiocampus.be). Autres moyens numériques pour entrer en communication avec l'équipe de source : un salon de *clavardage* IRC est accessible via le bouton, en haut à droite, ou via n'importe quel prog IRC : #source sur freenode.net. 
+
+Essayez-vous à la vidéo-conférence 
+
 ---
 who_are_we:
 
