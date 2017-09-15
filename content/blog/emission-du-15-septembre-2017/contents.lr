@@ -9,7 +9,7 @@ url: https://hsbxl.be/Software_Freedom_Day_2017
 ---
 audio_url: http://public.radiocampus.be/Fred/2017-09-15_Source_SoftwareFreedomDay_PMPC_SourceMastodon.ogg
 ---
-author: Fredux
+author: l'équipe
 ---
 body:
 
@@ -41,3 +41,5 @@ title: Font Forge
 url: https://fontforge.github.io/en-US/
 ---
 pub_date: 2017-09-15
+---
+image: serveimage.jpeg
