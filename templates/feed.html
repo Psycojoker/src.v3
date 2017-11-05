@@ -30,6 +30,7 @@
             {{ post.body|forceescape }}
           </content>
           <enclosure url="{{ post.audio_url }}" type="audio/mpeg" length="1" />
+          <link rel="enclosure" href="{{ post.audio_url }}" type="audio/mpeg" />
         </entry>
     {% endif %}
 {% endfor %}
